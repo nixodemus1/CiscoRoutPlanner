@@ -1,8 +1,0 @@
-/**
- * 
- */
-/**
- * @author nchow
- *
- */
-package hackNetAT;
