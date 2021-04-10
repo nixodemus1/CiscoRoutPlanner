@@ -27,6 +27,9 @@ public class User {
 	@Column(name = "last_name", nullable = false, length = 20)
 	private String lastName;
 
+	@Column(name = "priority", nullable = false, length = 2)
+	private String priority;
+
 	public Long getId() {
 		return id;
 	}
@@ -55,6 +58,8 @@ public class User {
 		return firstName;
 	}
 
+	public String getPriority(){return priority;}
+
 	public void setFirstName(String firstName) {
 		this.firstName = firstName;
 	}
@@ -66,7 +71,9 @@ public class User {
 	public void setLastName(String lastName) {
 		this.lastName = lastName;
 	}
-	
-	
+
+	public void setpriority(String pr) {
+		this.priority = pr;
+	}
 	
 }

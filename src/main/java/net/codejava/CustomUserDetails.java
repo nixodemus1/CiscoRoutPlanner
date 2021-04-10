@@ -28,6 +28,8 @@ public class CustomUserDetails implements UserDetails {
 		return user.getEmail();
 	}
 
+	public String getpriority(){return user.getPriority();}
+
 	@Override
 	public boolean isAccountNonExpired() {
 		return true;

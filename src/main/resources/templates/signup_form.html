@@ -3,14 +3,25 @@
 <head>
 	<meta charset="ISO-8859-1">
 	<title>Sign Up - CodeJava</title>
-	<link rel="stylesheet" type="text/css" href="/webjars/bootstrap/css/bootstrap.min.css" />
-	<script type="text/javascript" src="/webjars/jquery/jquery.min.js"></script>
-	<script type="text/javascript" src="/webjars/bootstrap/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+	<script src = "//ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script type="text/javascript" src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+	<style>
+		body {
+			background-image: url("img/cisco2.jpg");
+			background-size: cover;
+			background-position: center;
+
+		}
+
+	</style>
+
 </head>
 <body>
 	<div class="container text-center">
 		<div>
-			<h1>User Registration - Sign Up</h1>
+			<h1>User Registration - Sign Up/ Request PPE</h1>
 		</div>
 		<form th:action="@{/process_register}" th:object="${user}" 
 			method="post" style="max-width: 600px; margin: 0 auto;">
@@ -45,7 +56,17 @@
 							required minlength="2" maxlength="20" />
 				</div>
 			</div>
-			
+
+			<label for="numbs">Priority:</label>
+
+			<select name="vals" id="numbs" th:field="*{priority}">
+				<option value="1">1</option>
+				<option value="2">2</option>
+				<option value="3">3</option>
+				<option value="4">4</option>
+				<option value="5">5</option>
+			</select>
+
 			<div>
 				<button type="submit" class="btn btn-primary">Sign Up</button> 
 			</div>
